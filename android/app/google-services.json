@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "524432292792",
+    "project_id": "testo-2431c",
+    "storage_bucket": "testo-2431c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524432292792:android:2589f1c389d042f2ef2d4d",
+        "android_client_info": {
+          "package_name": "com.example.testo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524432292792-9j801lp709vumvjd1s853c2k5tlchsde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFbhy4p7OH0OVVxal4Q5o7MhIpNAT32Rs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524432292792-9j801lp709vumvjd1s853c2k5tlchsde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
