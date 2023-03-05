@@ -28,14 +28,12 @@ class AdProvider with ChangeNotifier {
       listener: BannerAdListener(
         onAdLoaded: (Ad ad) {
           print('$ad loaded: ${ad.responseInfo}');
-          dev.log('before');
 
           // When the ad is loaded, get the ad size and use it to set
           // the height of the ad container.
           anchoredAdaptiveAd = ad as BannerAd;
           isLoaded = true;
           notifyListeners();
-          dev.log('after');
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
           print('Anchored adaptive banner failedToLoad: $error');
