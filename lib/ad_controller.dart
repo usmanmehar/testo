@@ -2,16 +2,17 @@ import 'dart:developer' as dev;
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-class AdProvider with ChangeNotifier {
+class AdController extends GetxController {
   BannerAd? anchoredAdaptiveAd;
   bool isLoaded = false;
-  Future<void> loadAd(context) async {
+  Future<void> loadAd() async {
     // Get an AnchoredAdaptiveBannerAdSize before loading the ad.
     final AnchoredAdaptiveBannerAdSize? size =
         await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-            MediaQuery.of(context).size.width.truncate());
+            Get.width.truncate());
 
     if (size == null) {
       print('Unable to get height of anchored banner.');
@@ -33,7 +34,7 @@ class AdProvider with ChangeNotifier {
           // the height of the ad container.
           anchoredAdaptiveAd = ad as BannerAd;
           isLoaded = true;
-          notifyListeners();
+          update();
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
           print('Anchored adaptive banner failedToLoad: $error');
